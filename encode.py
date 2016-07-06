@@ -1,6 +1,6 @@
 #### LIBRARIES ####
 
-import subprocess 
+import subprocess
 import glob, os
 import shutil
 import random
@@ -13,10 +13,10 @@ class audioEncode:
 	input = '-i c:/ffmpeg/input.wav'
 	command = [ffmpegpath]
 	codec = ['aac', 'libmp3lame', 'hi']
-	
+
 	def __init__(self, output):
 		self.output = output
-	
+
 	def setCodec(self, codec):
 		if codec == '1':
 			self.codec = '-codec:a libmp3lame -qscale:a 1'
@@ -40,16 +40,16 @@ class audioEncode:
 			self.codec = '-codec:a libmp3lame -qscale:a 0'
 		elif codec == 'max':
 			self.codec = '-codec:a libmp3lame -b:a 320k'
-		
+
 	def getCodec(self):
-		return self.codec
-	
+		return self.code
+
 	def setOutput(self, output):
 		self.output=output
-			
+
 	def getOutput(self):
 		return self.Output
-		
+
 #help
 parser=argparse.ArgumentParser(
     description='''Convert all *.wav files from a given directory to mp3 lame /n
@@ -96,15 +96,9 @@ while True:
 
 
 
-#ffmpeg.exe -i input.wav -codec:a aac output.m4a 
+#ffmpeg.exe -i input.wav -codec:a aac output.m4a
 
 #c:/WinExec/ffmpeg.exe -i c:/WinExec/input.wav -codec:a aac output.m4a
 
 
 
-		
-		
-
-		
-	
-		
