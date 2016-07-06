@@ -4,8 +4,10 @@ import shutil
 
 def ffmpeg_conv(input, output, codec):
 	print "hola"
-	ffmpeg_path='C:/ffmpeg/ffmpeg.exe'
-	cmd = [ffmpeg_path]
+	#ffmpeg_path='C:/ffmpeg/ffmpeg.exe'
+	print ("Enter the path for ffmpeg")
+	input(path)
+	cmd = [path]
 	
 	cmd.append('-i')
 	cmd.append('C:/ffmpeg/'+input+'.wav')
