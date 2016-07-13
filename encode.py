@@ -1,5 +1,7 @@
 #### LIBRARIES ####
 
+### This code assumes you are running under windows environment ###
+
 import subprocess
 import glob, os
 import shutil
